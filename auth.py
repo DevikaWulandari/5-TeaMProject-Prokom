@@ -1,5 +1,5 @@
 import csv
-from versi_lain2 import *
+from program_kasir import *
 
 def registrasi():
     with open('username.csv', 'a') as f:

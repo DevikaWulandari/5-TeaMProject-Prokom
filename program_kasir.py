@@ -81,17 +81,3 @@ def pembayarann():
     pembayaran = float(input("CASH\t\t : "))
     kembalian = pembayaran-total
     print("Kembalian\t : %d" %kembalian)
-             
-        
-
-
-                
-                    
-
-
-      
-    
-    
-    
-
-        
