@@ -133,4 +133,3 @@ def pembayaran():
 awal = True
 if awal == True:
     menu()
-                
