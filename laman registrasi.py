@@ -2,9 +2,9 @@ from auth import *
 import csv
 
 def auth():
-    print("="*70)
-    print('{:^70}'.format('Welcome'))
-    print("="*70)
+    print("="*61)
+    print('{:^61}'.format('Welcome'))
+    print("="*61)
     print()
     akun = 'i'
     while (akun != 'q' or akun!= 'Q'):
