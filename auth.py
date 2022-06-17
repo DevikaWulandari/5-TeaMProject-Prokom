@@ -1,6 +1,7 @@
 import csv
 from program_kasir import *
 
+#laman registrasi
 def registrasi():
     with open('username.csv', 'a') as f:
         writer = csv.writer(f)
@@ -12,6 +13,7 @@ def registrasi():
     print("\nSilahkan Login")
     return 'success'
 
+#laman login
 def login():
 
     with open("username.csv", "r") as x:
