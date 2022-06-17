@@ -23,7 +23,6 @@ def menu():
 
     #mengaktifkan program pembelian
     pembelian()
-   
 
 
   
