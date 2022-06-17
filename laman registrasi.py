@@ -1,6 +1,8 @@
 from auth import *
 import csv
 
+#membuat halaman awal
+#program dimulai dari sini
 def auth():
     print("="*61)
     print('{:^61}'.format('Welcome'))
@@ -12,13 +14,13 @@ def auth():
         if (akun == "Y" or akun=="y"):
             print("Silahkan Login")
             while True:
-                state = login()
+                state = login() #membuka fungsi program login
                 if state == False:
                     break
             return False
         elif (akun == "N" or akun== "n"):
             print("Silahkan Mendafatar")
-            state = registrasi()
+            state = registrasi() #membuka fungsi program registrasi
             if state == 'success':
                 state1 = True
                 while state1 == True:
