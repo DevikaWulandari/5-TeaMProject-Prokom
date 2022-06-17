@@ -6,7 +6,7 @@ kembalian = 0
 pembayaran=0
 pesanan=[]
 
-
+#bagian pemesanan
 def pembelian():
     global pesanan    
     while True:
@@ -37,6 +37,7 @@ def pembelian():
                         elif (tambah == "N"or tambah =="n"):
                             no_meja = input("Input No Meja\t: ")
                             total_pembayaran = 0
+                            #mencetak pesanan ke csv
                             keys = pesanan[0].keys()
                             with open('pesanan.csv', 'a', newline='')  as output_file:
                                 dict_writer = csv.DictWriter(output_file, keys)
@@ -50,6 +51,8 @@ def pembelian():
             print("Input Anda Salah")
             pembelian()
             break
+        
+#mencetak struk pembelian
 def pembayarann():
     i=0
     global total
@@ -61,15 +64,15 @@ def pembayarann():
     print("=============================================================")
     
     for dictionary in pesanan: 
-            total_harga += int(dictionary["kuantitas"])*float(dictionary["harga"])
+            total_harga += int(dictionary["kuantitas"])*float(dictionary["harga"]) #menghitung total harga
 
-    for dictionary in pesanan:
+    for dictionary in pesanan: #mencetak pembelian yang telah dipilih
         print ("    {}\t         {}\t        {}\t  {}".format(dictionary['nama'],dictionary['harga'],dictionary['kuantitas'], int(dictionary['kuantitas'])
-                                                                  *float(dictionary['harga'])))
+                                                                  *float(dictionary['harga']))) 
 
     print("=============================================================\n")
     total = total_harga
     print("Total Pembayaran : %d" %total)
-    pembayaran = float(input("CASH\t\t : "))
+    pembayaran = float(input("CASH\t\t : ")) #input uang yang harus dibayarkan
     kembalian = pembayaran-total
     print("Kembalian\t : %d" %kembalian)                    
